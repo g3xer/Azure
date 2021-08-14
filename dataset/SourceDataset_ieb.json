@@ -1,0 +1,372 @@
+{
+	"name": "SourceDataset_ieb",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "amazonaw_com",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "SKU",
+				"type": "String"
+			},
+			{
+				"name": "OfferTermCode",
+				"type": "String"
+			},
+			{
+				"name": "RateCode",
+				"type": "String"
+			},
+			{
+				"name": "TermType",
+				"type": "String"
+			},
+			{
+				"name": "PriceDescription",
+				"type": "String"
+			},
+			{
+				"name": "EffectiveDate",
+				"type": "String"
+			},
+			{
+				"name": "StartingRange",
+				"type": "String"
+			},
+			{
+				"name": "EndingRange",
+				"type": "String"
+			},
+			{
+				"name": "Unit",
+				"type": "String"
+			},
+			{
+				"name": "PricePerUnit",
+				"type": "String"
+			},
+			{
+				"name": "Currency",
+				"type": "String"
+			},
+			{
+				"name": "RelatedTo",
+				"type": "String"
+			},
+			{
+				"name": "LeaseContractLength",
+				"type": "String"
+			},
+			{
+				"name": "PurchaseOption",
+				"type": "String"
+			},
+			{
+				"name": "OfferingClass",
+				"type": "String"
+			},
+			{
+				"name": "Product Family",
+				"type": "String"
+			},
+			{
+				"name": "serviceCode",
+				"type": "String"
+			},
+			{
+				"name": "Location",
+				"type": "String"
+			},
+			{
+				"name": "Location Type",
+				"type": "String"
+			},
+			{
+				"name": "Instance Type",
+				"type": "String"
+			},
+			{
+				"name": "Current Generation",
+				"type": "String"
+			},
+			{
+				"name": "Instance Family",
+				"type": "String"
+			},
+			{
+				"name": "vCPU",
+				"type": "String"
+			},
+			{
+				"name": "Physical Processor",
+				"type": "String"
+			},
+			{
+				"name": "Clock Speed",
+				"type": "String"
+			},
+			{
+				"name": "Memory",
+				"type": "String"
+			},
+			{
+				"name": "Storage",
+				"type": "String"
+			},
+			{
+				"name": "Network Performance",
+				"type": "String"
+			},
+			{
+				"name": "Processor Architecture",
+				"type": "String"
+			},
+			{
+				"name": "Storage Media",
+				"type": "String"
+			},
+			{
+				"name": "Volume Type",
+				"type": "String"
+			},
+			{
+				"name": "Max Volume Size",
+				"type": "String"
+			},
+			{
+				"name": "Max IOPS/volume",
+				"type": "String"
+			},
+			{
+				"name": "Max IOPS Burst Performance",
+				"type": "String"
+			},
+			{
+				"name": "Max throughput/volume",
+				"type": "String"
+			},
+			{
+				"name": "Provisioned",
+				"type": "String"
+			},
+			{
+				"name": "Tenancy",
+				"type": "String"
+			},
+			{
+				"name": "EBS Optimized",
+				"type": "String"
+			},
+			{
+				"name": "Operating System",
+				"type": "String"
+			},
+			{
+				"name": "License Model",
+				"type": "String"
+			},
+			{
+				"name": "Group",
+				"type": "String"
+			},
+			{
+				"name": "Group Description",
+				"type": "String"
+			},
+			{
+				"name": "Transfer Type",
+				"type": "String"
+			},
+			{
+				"name": "From Location",
+				"type": "String"
+			},
+			{
+				"name": "From Location Type",
+				"type": "String"
+			},
+			{
+				"name": "To Location",
+				"type": "String"
+			},
+			{
+				"name": "To Location Type",
+				"type": "String"
+			},
+			{
+				"name": "usageType",
+				"type": "String"
+			},
+			{
+				"name": "operation",
+				"type": "String"
+			},
+			{
+				"name": "AvailabilityZone",
+				"type": "String"
+			},
+			{
+				"name": "CapacityStatus",
+				"type": "String"
+			},
+			{
+				"name": "ClassicNetworkingSupport",
+				"type": "String"
+			},
+			{
+				"name": "Dedicated EBS Throughput",
+				"type": "String"
+			},
+			{
+				"name": "ECU",
+				"type": "String"
+			},
+			{
+				"name": "Elastic Graphics Type",
+				"type": "String"
+			},
+			{
+				"name": "Enhanced Networking Supported",
+				"type": "String"
+			},
+			{
+				"name": "GPU",
+				"type": "String"
+			},
+			{
+				"name": "GPU Memory",
+				"type": "String"
+			},
+			{
+				"name": "Instance",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - 10xlarge",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - 12xlarge",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - 16xlarge",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - 18xlarge",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - 24xlarge",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - 2xlarge",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - 32xlarge",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - 4xlarge",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - 8xlarge",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - 9xlarge",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - large",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - medium",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - metal",
+				"type": "String"
+			},
+			{
+				"name": "Instance Capacity - xlarge",
+				"type": "String"
+			},
+			{
+				"name": "instanceSKU",
+				"type": "String"
+			},
+			{
+				"name": "Intel AVX Available",
+				"type": "String"
+			},
+			{
+				"name": "Intel AVX2 Available",
+				"type": "String"
+			},
+			{
+				"name": "Intel Turbo Available",
+				"type": "String"
+			},
+			{
+				"name": "MarketOption",
+				"type": "String"
+			},
+			{
+				"name": "Normalization Size Factor",
+				"type": "String"
+			},
+			{
+				"name": "Physical Cores",
+				"type": "String"
+			},
+			{
+				"name": "Pre Installed S/W",
+				"type": "String"
+			},
+			{
+				"name": "Processor Features",
+				"type": "String"
+			},
+			{
+				"name": "Product Type",
+				"type": "String"
+			},
+			{
+				"name": "Resource Type",
+				"type": "String"
+			},
+			{
+				"name": "serviceName",
+				"type": "String"
+			},
+			{
+				"name": "Volume API Name",
+				"type": "String"
+			},
+			{
+				"name": "VPCNetworkingSupport",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "LG-Development",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1652642e-67dd-4f1e-95c3-b07fb62d7e76",
+		"tenantId": "9efe4455-9665-4d67-82fa-5b92d5f4986b"
+	}
+}

@@ -1,0 +1,1114 @@
+{
+	"name": "AWS Pricing",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy CSV",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 5
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "SKU",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 1
+								}
+							},
+							{
+								"source": {
+									"name": "OfferTermCode",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 2
+								}
+							},
+							{
+								"source": {
+									"name": "RateCode",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 3
+								}
+							},
+							{
+								"source": {
+									"name": "TermType",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 4
+								}
+							},
+							{
+								"source": {
+									"name": "PriceDescription",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 5
+								}
+							},
+							{
+								"source": {
+									"name": "EffectiveDate",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 6
+								}
+							},
+							{
+								"source": {
+									"name": "StartingRange",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 7
+								}
+							},
+							{
+								"source": {
+									"name": "EndingRange",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 8
+								}
+							},
+							{
+								"source": {
+									"name": "Unit",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 9
+								}
+							},
+							{
+								"source": {
+									"name": "PricePerUnit",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Currency",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 11
+								}
+							},
+							{
+								"source": {
+									"name": "RelatedTo",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 12
+								}
+							},
+							{
+								"source": {
+									"name": "LeaseContractLength",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 13
+								}
+							},
+							{
+								"source": {
+									"name": "PurchaseOption",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 14
+								}
+							},
+							{
+								"source": {
+									"name": "OfferingClass",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 15
+								}
+							},
+							{
+								"source": {
+									"name": "Product Family",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 16
+								}
+							},
+							{
+								"source": {
+									"name": "serviceCode",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 17
+								}
+							},
+							{
+								"source": {
+									"name": "Location",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 18
+								}
+							},
+							{
+								"source": {
+									"name": "Location Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 19
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 20
+								}
+							},
+							{
+								"source": {
+									"name": "Current Generation",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 21
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Family",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 22
+								}
+							},
+							{
+								"source": {
+									"name": "vCPU",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 23
+								}
+							},
+							{
+								"source": {
+									"name": "Physical Processor",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 24
+								}
+							},
+							{
+								"source": {
+									"name": "Clock Speed",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 25
+								}
+							},
+							{
+								"source": {
+									"name": "Memory",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 26
+								}
+							},
+							{
+								"source": {
+									"name": "Storage",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 27
+								}
+							},
+							{
+								"source": {
+									"name": "Network Performance",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 28
+								}
+							},
+							{
+								"source": {
+									"name": "Processor Architecture",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 29
+								}
+							},
+							{
+								"source": {
+									"name": "Storage Media",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 30
+								}
+							},
+							{
+								"source": {
+									"name": "Volume Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 31
+								}
+							},
+							{
+								"source": {
+									"name": "Max Volume Size",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 32
+								}
+							},
+							{
+								"source": {
+									"name": "Max IOPS/volume",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 33
+								}
+							},
+							{
+								"source": {
+									"name": "Max IOPS Burst Performance",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 34
+								}
+							},
+							{
+								"source": {
+									"name": "Max throughput/volume",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 35
+								}
+							},
+							{
+								"source": {
+									"name": "Provisioned",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 36
+								}
+							},
+							{
+								"source": {
+									"name": "Tenancy",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 37
+								}
+							},
+							{
+								"source": {
+									"name": "EBS Optimized",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 38
+								}
+							},
+							{
+								"source": {
+									"name": "Operating System",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 39
+								}
+							},
+							{
+								"source": {
+									"name": "License Model",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 40
+								}
+							},
+							{
+								"source": {
+									"name": "Group",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 41
+								}
+							},
+							{
+								"source": {
+									"name": "Group Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 42
+								}
+							},
+							{
+								"source": {
+									"name": "Transfer Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 43
+								}
+							},
+							{
+								"source": {
+									"name": "From Location",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 44
+								}
+							},
+							{
+								"source": {
+									"name": "From Location Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 45
+								}
+							},
+							{
+								"source": {
+									"name": "To Location",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 46
+								}
+							},
+							{
+								"source": {
+									"name": "To Location Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 47
+								}
+							},
+							{
+								"source": {
+									"name": "usageType",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 48
+								}
+							},
+							{
+								"source": {
+									"name": "operation",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 49
+								}
+							},
+							{
+								"source": {
+									"name": "AvailabilityZone",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 50
+								}
+							},
+							{
+								"source": {
+									"name": "CapacityStatus",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 51
+								}
+							},
+							{
+								"source": {
+									"name": "ClassicNetworkingSupport",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 52
+								}
+							},
+							{
+								"source": {
+									"name": "Dedicated EBS Throughput",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 53
+								}
+							},
+							{
+								"source": {
+									"name": "ECU",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 54
+								}
+							},
+							{
+								"source": {
+									"name": "Elastic Graphics Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 55
+								}
+							},
+							{
+								"source": {
+									"name": "Enhanced Networking Supported",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 56
+								}
+							},
+							{
+								"source": {
+									"name": "GPU",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 57
+								}
+							},
+							{
+								"source": {
+									"name": "GPU Memory",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 58
+								}
+							},
+							{
+								"source": {
+									"name": "Instance",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 59
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - 10xlarge",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 60
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - 12xlarge",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 61
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - 16xlarge",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 62
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - 18xlarge",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 63
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - 24xlarge",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 64
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - 2xlarge",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 65
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - 32xlarge",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 66
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - 4xlarge",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 67
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - 8xlarge",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 68
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - 9xlarge",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 69
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - large",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 70
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - medium",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 71
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - metal",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 72
+								}
+							},
+							{
+								"source": {
+									"name": "Instance Capacity - xlarge",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 73
+								}
+							},
+							{
+								"source": {
+									"name": "instanceSKU",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 74
+								}
+							},
+							{
+								"source": {
+									"name": "Intel AVX Available",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 75
+								}
+							},
+							{
+								"source": {
+									"name": "Intel AVX2 Available",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 76
+								}
+							},
+							{
+								"source": {
+									"name": "Intel Turbo Available",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 77
+								}
+							},
+							{
+								"source": {
+									"name": "MarketOption",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 78
+								}
+							},
+							{
+								"source": {
+									"name": "Normalization Size Factor",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 79
+								}
+							},
+							{
+								"source": {
+									"name": "Physical Cores",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 80
+								}
+							},
+							{
+								"source": {
+									"name": "Pre Installed S/W",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 81
+								}
+							},
+							{
+								"source": {
+									"name": "Processor Features",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 82
+								}
+							},
+							{
+								"source": {
+									"name": "Product Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 83
+								}
+							},
+							{
+								"source": {
+									"name": "Resource Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 84
+								}
+							},
+							{
+								"source": {
+									"name": "serviceName",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 85
+								}
+							},
+							{
+								"source": {
+									"name": "Volume API Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 86
+								}
+							},
+							{
+								"source": {
+									"name": "VPCNetworkingSupport",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 87
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_ieb",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-08-14T10:11:17Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
