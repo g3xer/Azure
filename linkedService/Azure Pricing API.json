@@ -1,0 +1,13 @@
+{
+	"name": "Azure Pricing API",
+	"properties": {
+		"description": "https://azure.microsoft.com/api/v2/pricing/virtual-machines-base/calculator/?culture=en-us&discount=mosp&currency=usd",
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://azure.microsoft.com/api/v2/pricing/virtual-machines-base/calculator/?culture=en-us&discount=mosp&currency=usd",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
